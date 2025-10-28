@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to PlayStation</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="https://www.playstation.com/favicon.ico" />
+    
+    <style>
+        :root {
+            --ps-blue: #0070d1;
+            --ps-dark-blue: #0A3D73; 
+            --ps-dark: #1f1f1f;
+            --ps-text: #333;
+            --ps-text-light: #555;
+            --ps-white: #ffffff;
+            
+            --ps-border: #dcdcdc;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--ps-white);
+            color: var(--ps-text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--ps-blue);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            font-family: inherit;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1 {
+            font-size: 1.875rem; 
+            font-weight: 700;
+            color: var(--ps-dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        
+        .login-container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+
+        
+        .left-pane {
+            flex-basis: 50%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            
+            background-image: url('https://wallpapercave.com/wp/wp4734415.jpg');
+            background-size: cover;
+            background-position: center center;
+        }
+        .ps-logo {
+            width: 80px;
+            height: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .left-pane {
+                display: none;
+            }
+        }
+
+        
+        .right-pane {
+            flex-basis: 50%;
+            background-color: var(--ps-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            overflow-y: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .right-pane {
+                flex-basis: 100%;
+            }
+        }
+
+        .sony-logo-top {
+            position: absolute;
+            top: 2rem;
+            right: 2.5rem;
+            height: 0.8rem;
+            width: auto;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 4.5rem;
+            right: 2.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--ps-text-light);
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            color: var(--ps-dark);
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input-group {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        .input-group label {
+            display: block;
+            font-size: 0.875rem; 
+            font-weight: 600;
+            color: var(--ps-text-light);
+            margin-bottom: 0.5rem;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 2px solid var(--ps-border);
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--ps-blue);
+            box-shadow: 0 0 0 2px rgba(0, 112, 209, 0.2);
+        }
+
+        
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.85rem 2rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-size: 0.9375rem; 
+            border: none;
+            cursor: pointer;
+        }
+        .btn-next {
+            background-color: var(--ps-dark-blue);
+            color: var(--ps-white);
+            margin-bottom: 1.5rem;
+        }
+        .btn-next:hover {
+            background-color: #0d4a85;
+        }
+        .btn-create-account {
+            background-color: var(--ps-white);
+            color: var(--ps-dark);
+            border: 2px solid var(--ps-border);
+        }
+        .btn-create-account:hover {
+            background-color: #f9f9f9;
+            border-color: #aaa;
+        }
+
+        
+        .form-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .bottom-link {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 768px) {
+            .bottom-link {
+                position: static; 
+                transform: none;
+                margin-top: 2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <div class="left-pane">
+            <img src="https://my.account.sony.com/sonyacct/signin/dsb_signin_21766/assets/images/playstationfamilymark_light.svg" alt="PlayStation Logo" class="ps-logo">
+        </div>
+
+        <div class="right-pane">
+            
+            <img src="https://my.account.sony.com/sonyacct/signin/dsb_signin_21766/assets/images/playstationfamilymark_light.svg" alt="Sony Logo" class="sony-logo-top">
+            
+            <button class="close-btn" aria-label="Close">&times;</button>
+
+            <div class="form-wrapper">
+                <h1>Sign in to PlayStation</h1>
+
+                <div class="input-group">
+                    <label for="email">Sign-in ID (Email Address)</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <a href="index.html"><button class="btn btn-next">Next</button></a>
+
+                <div class="form-links">
+                    <a href="#">About Sony Account</a>
+                    <a href="#">Trouble Signing In?</a>
+                </div>
+
+                <button class="btn btn-create-account">Create an Account</button>
+            </div>
+
+            <a href="index.html" class="bottom-link">Help/Site Map</a>
+        </div>
+        
+    </div>
+
+    </body>
+</html>
+
