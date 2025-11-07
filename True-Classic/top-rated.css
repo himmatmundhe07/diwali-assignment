@@ -1,0 +1,513 @@
+:root {
+    --color-black: #0b0a08;
+    --color-white: #ffffff;
+    --color-grey: #d3d4d7;
+    --color-darkred: #971b1b;
+    --color-dark-yellow: #f1c176;
+    --color-lightgreen: #219151;
+    --color-darkgreen: #155f35;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img {
+    height: auto;
+}
+
+.above-nav-bar {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    height: 2vw;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-head {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: var(--color-white);
+}
+
+.nav-bar {
+    display: flex;
+    height: 4.5vw;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.nav-bar-logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.1em;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-bar-centre {
+    font-family: 'modernist', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.nav-bar-centre :hover {
+    text-decoration: underline;
+}
+
+.nav-bar-rigth {
+    display: flex;
+    align-items: center;
+    gap: 1.3em;
+}
+
+.top-rated-section {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6.8rem;
+
+}
+
+.top-rated {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    font-family: 'modernist', sans-serif;
+    gap: 0.5rem;
+}
+
+.top-rated-stats {
+    font-weight: lighter;
+}
+
+
+/* Container for ALL the cards */
+.top-rated-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    /* Constrains the width */
+    margin: 0 auto;
+}
+
+/* The card for ONE product */
+.top-product {
+    display: flex;
+    align-items: flex-start;
+    /* Aligns image and text to the top */
+    gap: 1.5rem;
+    /* Space between image and text */
+
+    width: 100%;
+    /* Make it fill the container */
+    background-color: var(--color-white);
+
+    padding: 1.5rem;
+    border: 1px solid var(--color-dark-yellow);
+    /* Your grey border */
+    border-radius: 12px;
+    /* Rounded corners for the card */
+
+    /* Adds the subtle shadow from the image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    /* For the badge */
+}
+
+/* The badge (#1 Top Rated) */
+.product-badge {
+    position: absolute;
+    top: -16px;
+    /* Position it outside the card */
+    left: 24px;
+    background-color: var(--color-dark-yellow);
+    /* Orange background */
+    color: var(--color-black);
+    /* Black text */
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Container for the image */
+.top-product-img {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+/* The image itself */
+.top-product-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Rounded corners for the image */
+    object-fit: cover;
+}
+
+/* Container for ALL text content */
+.top-product-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+/* Header row (holds title/reviews and rating) */
+.detail-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* NEW: Container for title AND reviews */
+.head-title-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    /* Small space between title and stars */
+}
+
+/* Product title */
+.head-title p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--color-black);
+}
+
+/* NEW: Container for stars and review count */
+.head-reviews {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.head-reviews img {
+    width: 18px;
+    height: 18px;
+}
+
+/* This styles the "53 Reviews" text */
+.head-reviews span {
+    font-size: 0.95rem;
+    color: #555;
+    margin-left: 4px;
+    text-decoration: underline;
+    /* Adds underline */
+    cursor: pointer;
+}
+
+/* The green rating box */
+.product-rating {
+    display: flex;
+    padding: 8px 12px;
+    background-color: var(--color-darkgreen);
+    /* Your dark green */
+    border: none;
+    color: var(--color-white);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* Container for description and button */
+.product-description {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* Fills space to push button down */
+    margin-top: 1rem;
+    /* Space below header */
+}
+
+/* Description text */
+.product-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    /* A softer black */
+}
+
+/* Buy Now button */
+.product-description button {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    /* Taller button */
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#f2a539, #f8c071);
+    /* Orange background */
+    color: var(--color-black);
+    /* Black text */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+    /* Pushes to the bottom */
+}
+
+.product-description button:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+    
+}
+
+.why-us-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+}
+
+.why-us-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex: 1;
+    font-family: 'modernist', sans-serif;
+    gap: 0.5rem;
+}
+
+
+.why-us-reson {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8em;
+    background-color: var(--color-white);
+    font-family: 'modernist', sans-serif;
+}
+
+.why-us {
+    max-width: 30%;
+    min-width: 300px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.why-us:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.why-us-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.why-us-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.why-us-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    text-align: left;
+    color: var(--color-black);
+}
+
+
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.above-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    text-align: left;
+}
+
+.footer-title {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.shop p {
+    margin-top: 0.8em;
+    color: var(--color-grey);
+}
+
+.more-info p {
+    margin-top: 0.8em;
+    color: var(--color-grey);
+}
+
+.support p {
+    margin-top: 0.8em;
+    color: var(--color-grey);
+}
+
+.shop p:hover {
+    text-decoration: underline;
+}
+
+.more-info p:hover {
+    text-decoration: underline;
+}
+
+.support p:hover {
+    text-decoration: underline;
+}
+
+.footer-stay p {
+    margin-bottom: 2em;
+}
+
+.footer-stay form input {
+    margin-bottom: 2em;
+
+}
+
+.footer-stay input {
+    width: 15em;
+    height: 3em;
+    border-radius: 5px;
+    color: var(--color-black);
+    margin-bottom: 2rem;
+
+}
+
+.social-handle img {
+    margin-right: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.below-footer {
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.above-hr {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-grey);
+    font-size: large;
+}
+
+.above-hr span:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 800px) {
+
+
+    .nav-head {
+        position: relative;
+    }
+
+
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+
+    .nav-bar-centre {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8em;
+    }
+
+
+    .nav-bar-rigth {
+        gap: 1.5em;
+    }
+
+
+    .above-nav-bar {
+        height: auto;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .above-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+
+    .above-hr {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

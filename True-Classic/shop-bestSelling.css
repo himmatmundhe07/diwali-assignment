@@ -1,0 +1,719 @@
+:root {
+  --color-black: #0b0a08;
+  --color-white: #ffffff;
+  --color-grey: #d3d4d7;
+  --color-darkred: #971b1b;
+  --color-darkgrey: #656565;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+img {
+  height: auto;
+}
+
+.above-nav-bar {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  height: 2vw;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-head {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+.nav-bar {
+    display: flex;
+    height: 4.5vw;
+    justify-content: space-around;
+    border-bottom: 0.5px solid var(--color-grey);
+}
+
+.nav-bar-logo {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+
+}
+
+.nav-bar-centre {
+  font-family: 'modernist', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.nav-bar-centre :hover {
+  text-decoration: underline;
+}
+
+.nav-bar-rigth {
+  display: flex;
+  align-items: center;
+  gap: 1.3em;
+}
+
+.hero-banner-1 img {
+  margin-top: 6.5vw;
+  width: 100%;
+}
+
+.hero-banner-2 img {
+  margin-top: -0.3vw;
+  width: 100%;
+}
+
+.filter-section{
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-darkgrey);
+  margin-bottom: 1rem;
+}
+.filter-section-rgt{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 0.5rem;
+}
+.filter-section-lft{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+.filter-section-lft select{
+  background-color: var(--color-white);
+  color: var(--color-darkgrey);
+  border: none
+}
+.stats-container {
+
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.stat-box {
+  align-content: center;
+}
+
+.grid-shirt-top-tittle {
+  display: flex;
+  border: 2px solid black;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+}
+
+.plan-option {
+  display: inline-block;
+  margin: 5px 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  position: relative;
+}
+
+.plan-option input[type="radio"] {
+  display: none;
+}
+
+
+.plan-option span {
+  position: relative;
+  padding-bottom: 3px;
+  color: var(--color-black);
+}
+
+/* Underline effect */
+.plan-option span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+
+.plan-option input[type="radio"]:checked+span::after {
+  width: 100%;
+}
+
+
+.plan-option span:hover::after {
+  width: 100%;
+  opacity: 0.3;
+}
+
+/* dress-option */
+.grid-shirt-nav-bar{
+  display: flex;
+  justify-content: left;
+  margin-top: 0.6rem;
+}
+.category-buttons {
+    margin-top: 6.5rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.radio-box {
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-box input[type="radio"] {
+  display: none;
+}
+
+.radio-box span {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1.8px solid var(--color-grey);
+  border-radius: 0.8em;
+  font-size: 14px;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+/* Selected state */
+.radio-box input[type="radio"]:checked+span {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+
+/* Hover effect */
+.radio-box span:hover {
+  border-color: var(--color-black);
+}
+
+.grid-product-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8em;
+
+  background: var(--color-white);
+  font-family: 'Poppins', sans-serif;
+}
+
+.grid-product {
+  width: 15em;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.grid-product:hover {
+  transform: translateY(-5px);
+}
+
+.grid-product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.grid-product-name {
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--color-black);
+
+}
+
+.why-us-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+
+.why-us-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: left;
+  align-items: left;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex: 1;
+  font-family: 'modernist', sans-serif;
+  gap: 0.5rem;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 1.5rem; 
+  margin-left: 0.5rem;
+}
+
+.section-title h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem; 
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0.3em;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 7em;        
+  height: 0.2em;     
+  background-color: #000;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0.05em;    
+  left: 7em;         
+  right: 0;
+  height: 0.05em;    
+  background-color: #aaa;
+}
+
+.problem-statement{
+  
+  font-weight: lighter;
+}
+
+.why-us-reson {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8em;
+  background-color: var(--color-white);
+  font-family: 'modernist', sans-serif;
+}
+
+.why-us {
+  max-width: 30%;
+  min-width: 300px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-grey);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-us:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.why-us-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.why-us-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+
+.why-us-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  color: var(--color-black);
+}
+
+.grid-bestproduct-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8em;
+  margin-bottom: 3rem;
+  background: var(--color-white);
+  font-family: 'Poppins', sans-serif;
+}
+
+.grid-bestproduct {
+  width: 20em;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.grid-bestproduct:hover {
+  transform: translateY(-5px);
+}
+
+.grid-bestproduct-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+/*PRODUCT CARD ICONS AND BADGE*/
+
+/* 1. Make the image container a positioning reference */
+/* This selector now applies the rule to BOTH grids */
+.grid-bestproduct-image,
+.grid-product-image {
+    position: relative;
+    overflow: hidden; 
+}
+
+/* 2. Style the "#1 Most Liked" badge */
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 5px;
+    z-index: 1; /* Sits on top of the image */
+}
+
+/* 3. Shared style for both icon buttons */
+.product-icon-btn {
+    position: absolute;
+    bottom: 12px;
+    width: 40px;  /* Creates the circle width */
+    height: 40px; /* Creates the circle height */
+    border-radius: 50%; /* Makes it a circle */
+    
+    /* This background color matches your image */
+    background-color: rgba(112, 112, 112, 0.9); 
+    
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;  /* Makes the "+" icon large */
+    font-weight: 300; /* Makes the "+" icon thinner */
+    
+    /* These lines center the icon inside the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 1;
+    transition: background-color 0.5s ease;
+}
+
+.product-icon-btn:hover {
+    background-color: var(--color-black);
+}
+
+/* 4. Position the heart button on the left */
+.product-heart-btn {
+    left: 12px;
+    font-size: 1.5rem; /* Make the heart a bit smaller */
+}
+
+/* 5. Position the add button on the right */
+.product-add-btn {
+    right: 12px;
+}
+.grid-bestproduct-name {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  color: var(--color-black);
+  gap: 0.4em;
+}
+
+.special-deal {
+  display: flex;
+  font-size: small;
+  background-color: var(--color-darkred);
+  color: var(--color-white);
+  border-radius: 8px;
+  width: fit-content;
+  height: auto;
+  padding: 0.3em 0.7em;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.discount {
+  font-size: small;
+  font-weight: 100;
+}
+
+.best-seller-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  margin-top: 5rem;
+  border: 1px solid var(--color-grey);
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.best-seller-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: x-large;
+  font-family: 'modernist', sans-serif;
+  gap: 0.5rem;
+}
+
+footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.above-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  text-align: left;
+}
+
+.footer-title {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.shop p {
+  margin-top: 0.8em;
+  color: var(--color-grey);
+}
+
+.more-info p {
+  margin-top: 0.8em;
+  color: var(--color-grey);
+}
+
+.support p {
+  margin-top: 0.8em;
+  color: var(--color-grey);
+}
+
+.shop p:hover {
+  text-decoration: underline;
+}
+
+.more-info p:hover {
+  text-decoration: underline;
+}
+
+.support p:hover {
+  text-decoration: underline;
+}
+
+.footer-stay p {
+  margin-bottom: 2em;
+}
+
+.footer-stay form input {
+  margin-bottom: 2em;
+
+}
+
+.footer-stay input {
+  width: 15em;
+  height: 3em;
+  border-radius: 5px;
+  color: var(--color-black);
+  margin-bottom: 2rem;
+
+}
+
+.social-handle img {
+  margin-right: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.below-footer {
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.above-hr {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-grey);
+  font-size: large;
+}
+
+.above-hr span:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 800px) {
+
+
+  .nav-head {
+    position: relative;
+  }
+
+
+  .nav-bar {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+
+  .nav-bar-centre {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+  }
+
+
+  .nav-bar-rigth {
+    gap: 1.5em;
+  }
+
+
+  .above-nav-bar {
+    height: auto;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+
+  .hero-banner-1 img {
+    margin-top: 0;
+  }
+
+  .grid-bestproduct-name {
+    align-items: center;
+  }
+
+  .best-seller-box {
+    font-size: 1.1rem; 
+  }
+  .best-seller-box p {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  
+  .stats-container {
+    flex-direction: column; 
+    height: auto;           
+    padding: 2rem 0;        
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+ 
+  .grid-product {
+    width: 45%; 
+  }
+
+  
+  .grid-bestproduct {
+    width: 90%;         
+    text-align: center; 
+  }
+
+  
+  .grid-bestproduct-name {
+    align-items: center; 
+  }
+
+  
+  .above-footer {
+    flex-direction: column; 
+    align-items: center;     
+    text-align: center;      
+    gap: 2rem;
+  }
+
+  
+  .above-hr {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .grid-product {
+    width: 90%; 
+  }
+}
