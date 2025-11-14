@@ -120,45 +120,35 @@ img {
     gap: 2.5rem;
     padding: 2rem 1rem;
     max-width: 800px;
-    /* Constrains the width */
+    
     margin: 0 auto;
 }
 
-/* The card for ONE product */
+
 .top-product {
     display: flex;
     align-items: flex-start;
-    /* Aligns image and text to the top */
     gap: 1.5rem;
-    /* Space between image and text */
 
     width: 100%;
-    /* Make it fill the container */
     background-color: var(--color-white);
 
     padding: 1.5rem;
     border: 1px solid var(--color-dark-yellow);
-    /* Your grey border */
     border-radius: 12px;
-    /* Rounded corners for the card */
 
-    /* Adds the subtle shadow from the image */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
     position: relative;
-    /* For the badge */
 }
 
 /* The badge (#1 Top Rated) */
 .product-badge {
     position: absolute;
     top: -16px;
-    /* Position it outside the card */
     left: 24px;
     background-color: var(--color-dark-yellow);
-    /* Orange background */
     color: var(--color-black);
-    /* Black text */
     padding: 8px 12px;
     border-radius: 8px;
     font-size: 0.9rem;
@@ -171,16 +161,13 @@ img {
     flex-shrink: 0;
 }
 
-/* The image itself */
 .top-product-img img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    /* Rounded corners for the image */
     object-fit: cover;
 }
 
-/* Container for ALL text content */
 .top-product-details {
     display: flex;
     flex-direction: column;
@@ -188,7 +175,6 @@ img {
     min-width: 0;
 }
 
-/* Header row (holds title/reviews and rating) */
 .detail-head {
     display: flex;
     justify-content: space-between;
@@ -196,15 +182,12 @@ img {
     gap: 1rem;
 }
 
-/* NEW: Container for title AND reviews */
 .head-title-reviews {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    /* Small space between title and stars */
 }
 
-/* Product title */
 .head-title p {
     font-size: 1.5rem;
     font-weight: bold;
@@ -212,7 +195,6 @@ img {
     color: var(--color-black);
 }
 
-/* NEW: Container for stars and review count */
 .head-reviews {
     display: flex;
     align-items: center;
@@ -224,13 +206,11 @@ img {
     height: 18px;
 }
 
-/* This styles the "53 Reviews" text */
 .head-reviews span {
     font-size: 0.95rem;
     color: #555;
     margin-left: 4px;
     text-decoration: underline;
-    /* Adds underline */
     cursor: pointer;
 }
 
@@ -239,7 +219,6 @@ img {
     display: flex;
     padding: 8px 12px;
     background-color: var(--color-darkgreen);
-    /* Your dark green */
     border: none;
     color: var(--color-white);
     font-size: 1.1rem;
@@ -256,9 +235,7 @@ img {
     display: flex;
     flex-direction: column;
     flex: 1;
-    /* Fills space to push button down */
     margin-top: 1rem;
-    /* Space below header */
 }
 
 /* Description text */
@@ -266,7 +243,6 @@ img {
     font-size: 1rem;
     line-height: 1.6;
     color: #333;
-    /* A softer black */
 }
 
 /* Buy Now button */
@@ -293,7 +269,7 @@ img {
 .product-description button:hover {
     transform: scale(1.01);
     transition: transform 0.3s ease;
-    
+
 }
 
 .why-us-container {
