@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Thrift Shop - Buy, Sell, Rent - Bombay Closet Cleanse</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger-icon">
+                <svg viewBox="0 0 100 80" width="25" height="25" fill="#6d5c53">
+                    <rect width="100" height="10"></rect>
+                    <rect y="30" width="100" height="10"></rect>
+                    <rect y="60" width="100" height="10"></rect>
+                </svg>
+            </label>
+
+            <div class="nav-lft">
+                <img src="https://bombayclosetcleanse.in/cdn/shop/files/Untitled_design_9.png?v=1726226430&width=130"
+                    alt="brand logo">
+            </div>
+            <div class="nav-main">
+                <a href="">Home</a>
+                <select name="selection" id="my-selection">
+                    <option value="">SUNNY KAUSHAL'S CLOSET</option>
+                    <option value="option1">SHOP ALL</option>
+                    <option value="option2">Tees, Hoodies & more</option>
+                    <option value="option3">Watches & Accessories</option>
+                    <option value="option3">Sneakers & more</option>
+                    <option value="option3">Traditional & Formal Curation</option>
+                </select>
+                <a href="premium.html">PREMIUM FINDS</a>
+                <a href="">SNEAKER RAFFLE TICKETS</a>
+            </div>
+            <div class="nav-rgt">
+                <a href="">INR ₹ | India</a>
+                <a href=""><img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyZW0iIGhlaWdodD0iMmVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM2ZDVjNTMiIGQ9Im0xOS40ODUgMjAuMTU0bC02LjI2Mi02LjI2MnEtLjc1LjYzOS0xLjcyNS45ODl0LTEuOTYuMzVxLTIuNDAyIDAtNC4wNjYtMS42NjNUMy44MDggOS41MDNUNS40NyA1LjQzNnQ0LjA2NC0xLjY2N3Q0LjA2OCAxLjY2NFQxNS4yNjggOS41cTAgMS4wNDItLjM2OSAyLjAxN3QtLjk3IDEuNjY4bDYuMjYyIDYuMjYxek05LjUzOSAxNC4yM3ExLjk5IDAgMy4zNi0xLjM3dDEuMzctMy4zNjF0LTEuMzctMy4zNnQtMy4zNi0xLjM3dC0zLjM2MSAxLjM3dC0xLjM3IDMuMzZ0MS4zNyAzLjM2dDMuMzYgMS4zNyIvPjwvc3ZnPg=="
+                        alt=""></a>
+                <a href=""><img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyZW0iIGhlaWdodD0iMmVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM2ZDVjNTMiIGQ9Ik0xMS41IDE0YzQuMTQgMCA3LjUgMS41NyA3LjUgMy41VjIwSDR2LTIuNWMwLTEuOTMgMy4zNi0zLjUgNy41LTMuNW02LjUgMy41YzAtMS4zOC0yLjkxLTIuNS02LjUtMi41UzUgMTYuMTIgNSAxNy41VjE5aDEzek0xMS41IDVBMy41IDMuNSAwIDAgMSAxNSA4LjVhMy41IDMuNSAwIDAgMS0zLjUgMy41QTMuNSAzLjUgMCAwIDEgOCA4LjVBMy41IDMuNSAwIDAgMSAxMS41IDVtMCAxQTIuNSAyLjUgMCAwIDAgOSA4LjVhMi41IDIuNSAwIDAgMCAyLjUgMi41QTIuNSAyLjUgMCAwIDAgMTQgOC41QTIuNSAyLjUgMCAwIDAgMTEuNSA2Ii8+PC9zdmc+"
+                        alt=""></a>
+                <a href=""><img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyZW0iIGhlaWdodD0iMmVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZkNWM1MyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSI+PHBhdGggZD0iTTYuNDUgOS4yM2gxMS4xYTEuODUgMS44NSAwIDAgMSAxLjg1IDEuODV2Ni40NzJhMy43IDMuNyAwIDAgMS0zLjcgMy42OThIOC4zYTMuNyAzLjcgMCAwIDEtMy43LTMuNjk4VjExLjA4YTEuODUgMS44NSAwIDAgMSAxLjg1LTEuODUiLz48cGF0aCBkPSJNMTYuNjI1IDExLjU1M1Y3LjM4MWE0LjYyIDQuNjIgMCAwIDAtMi44NTItNC4yNzhhNC42MjcgNC42MjcgMCAwIDAtNi4zOTggNC4yNzh2NC4xNzIiLz48L2c+PC9zdmc+"
+                        alt=""></a>
+            </div>
+
+        </nav>
+        <div class="hero-section">
+            <img src="https://bombayclosetcleanse.in/cdn/shop/files/WhatsApp_Image_2025-10-14_at_4.40.21_PM.jpg?v=1760440825&width=3000"
+                alt="">
+        </div>
+    </header>
+    <main>
+        <div class="top-product">
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_e86ae323-2326-44ba-8073-983ad5aab7c2.jpg?v=1756801115"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Scotch & Soda Pink Jacket</a>
+                    <span>Rs. 4,890.00</span>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_ba65e1ee-d111-4731-9a19-be3c45cbcd1c.jpg?v=1756804996&width=533"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Asos Weekday Sweatshirt</a>
+                    <span><del>Rs. 4,427.00</del> Rs. 2,490.00</span>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/9DD658B8-7B97-49E2-8D3D-3F7DEBD6D22A.jpg?v=1758096493&width=533"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Toyota Green Jeans</a>
+                    <span>Rs. 3,290.00</span>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/EE9B9957-8DEF-4F73-B336-DE16C66194D4.jpg?v=1760690937&width=533"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Zara Satin Black Pant</a>
+                    <span>Rs. 1,490.00</span>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/13F5C9FF-373C-4D21-9FF3-6D3072A29F5F.jpg?v=1758096493&width=533"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Blue Denim Jeans</a>
+                    <span>Rs. 1,890.00</span>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/55F56D3A-5840-48B1-84E0-17F3D011B765.jpg?v=1758096493&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Zara Beige Pants</a>
+                    <span>Rs. 1,890.00</span>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/2A07CFF3-21EE-4661-BC4C-8C44CC50E812.jpg?v=1760433648&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Zara Black Pants</a>
+                    <span>Rs. 1,290.00</span>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/44E1FE2A-F90D-4B1C-B47B-EDCFAA678799.jpg?v=1758094759&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Levis Water Less Denim Blue Jeans</a>
+                    <span>Rs. 1,890.00</span>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="header">
+            <p>ACCESSORIES</p>
+        </div>
+        <div class="accessories-section">
+
+            <div class="accessories">
+                <div class="accessories-image">
+                    <img class="accessories-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_2b89d23d-87b3-4e1f-9cb4-65f1f2fc0c5b.jpg?v=1756811973&width=600"
+                        alt="">
+                    <img class="accessories-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_eff512d2-230e-4039-a7fa-2c8641570d67.jpg?v=1756812723"
+                        alt="">
+                </div>
+                <div class="accessories-details">
+                    <a href="">Ferragamo Chronograph Quartz Blue</a>
+                    <span><del>Rs. 149,100.0</del> Rs. 32,000.00</span>
+                </div>
+            </div>
+
+            <div class="accessories">
+                <div class="accessories-image">
+                    <img class="accessories-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/IMG-6608.jpg?v=1756886878&width=600"
+                        alt="">
+                    <img class="accessories-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/IMG-6609.jpg?v=1756886878&width=360"
+                        alt="">
+                </div>
+                <div class="accessories-details">
+                    <a href="">Red Stone Ring</a>
+                    <span>Rs. 690.00</span>
+                </div>
+            </div>
+
+            <div class="accessories">
+                <div class="accessories-image">
+                    <img class="accessories-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_98fa93d1-399f-4167-b51b-e7157579f186.jpg?v=1756813056&width=600"
+                        alt="">
+                    <img class="accessories-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_32a08dcf-330e-4be8-91c1-b06eab0336cc.jpg?v=1756813056&width=360"
+                        alt="">
+                </div>
+                <div class="accessories-details">
+                    <a href="">Almost Gods Bucket Hat</a>
+                    <span>Rs. 3,290.00</span>
+                </div>
+            </div>
+
+            <div class="accessories">
+                <div class="accessories-image">
+                    <img class="accessories-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/IMG-6612.jpg?v=1756887087&width=600"
+                        alt="">
+                    <img class="accessories-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/IMG-6612.jpg?v=1756887087&width=360"
+                        alt="">
+                </div>
+                <div class="accessories-details">
+                    <a href="">Marble Pendant Necklace</a>
+                    <span>Rs. 490.00</span>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="header">
+            <p>SNEAKERS</p>
+        </div>
+        <div class="sneakers-section">
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/794027FA-EB10-43AE-9A76-B0CC8EE1030D.jpg?v=1760189322&width=600"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/5C0AFB3B-6801-47C6-B2EA-709EBB60C8E2.jpg?v=1760189322&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">Nike Air Trainer 1 Enamel Green</a>
+                    <span><del>Rs. 11,087.00</del> Rs. 7,890.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/BA1C15DC-241F-4B4C-B305-062A19A732ED.jpg?v=1756888817&width=533"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/F57583CF-C6F0-47B4-B511-B28F040698C8.jpg?v=1756888818&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">
+                        Gully Labs Brown X Sneakers
+                    </a>
+                    <span>Rs. 3,290.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/213A8D97-FB80-473A-A50A-B71C319DB932.jpg?v=1756890859&width=360"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/5E2AB060-289A-4289-A14A-235F6154A219.jpg?v=1756890859&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href=""> VEJA Campo Lace-up sneakers</a>
+                    <span>Rs. 6,290.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_d5af1d0c-fff7-4379-91c4-e40cd7f19cb8.jpg?v=1760606482&width=360"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_178c5dcd-cdff-4ba2-ab60-4e61de0e9e84.jpg?v=1760606482&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">Nike Air Trainer 1 Wheat Mocha</a>
+                    <span>Rs. 5,890.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_80a75105-b071-441f-8a3d-ba18d98d0618.png?v=1760607455&width=360"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_2ee8905d-8434-4a36-84ba-6c8c0a3d3092.png?v=1760607455&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">NIKE Air Max 86 sneaker</a>
+                    <span>Rs. 5,500.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_22c4bd08-81b6-49e6-b87c-e111b3c073c6.webp?v=1760606591&width=360"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_fea51fa9-ce8b-498a-8c75-a087caf2f1d8.jpg?v=1760606591&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">ASICS Gel Lyte III OG Cinnamon Stick</a>
+                    <span>Rs. 6,290.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_c0d0b389-f22d-4912-a854-553f124eeb5b.jpg?v=1760608421&width=360"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_a22bd6e7-d835-424b-8721-84735dde6343.jpg?v=1760608421&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">Red Wing Brown Boots</a>
+                    <span>Rs. 5,500.00</span>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="header">
+            <p>TRADITIONALS & FORMALS</p>
+        </div>
+
+        <div class="traditional-section">
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/IMG-6612.jpg?v=1756887087&width=360" alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/IMG-6612.jpg?v=1756887087&width=360" alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">Marble Pendant Necklace</a>
+                    <span>Rs. 490.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/F1BF4A76-F99F-406C-8063-5F8F55D95D06.jpg?v=1758094759&width=600"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/A138887F-22D6-466F-A565-E38265A5E778.jpg?v=1758094759&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">Massimo Dutti Blue Checked Blazer</a>
+                    <span>Rs. 4,290.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/A05827E0-CE7F-41AF-83CF-E5C87D533C4E.jpg?v=1757320800&width=600"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/8CDB0CC6-2B79-44B7-9B4C-00436FF17BE8.jpg?v=1757320800&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">alguni Shane & Peacock Falaknam</a>
+                    <span>Rs. 14,990.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/C6F07C6B-3511-468B-9FBF-021CFD5136EF.jpg?v=1757320753&width=600"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/6F2966F1-0B1C-4923-9002-F9585C8BEE26.jpg?v=1757320753&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">Kunal Rawal Kurta Set</a>
+                    <span>Rs. 4,890.00</span>
+                </div>
+            </div>
+
+            <div class="sneakers">
+                <div class="sneakers-image">
+                    <img class="sneakers-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/BA70A1CD-1695-481B-BEE0-2DF72AF65A82.jpg?v=1757321064&width=600"
+                        alt="">
+                    <img class="sneakers-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/A1B2C6D3-6CE6-4256-9B40-0EB004565A0C.jpg?v=1760429060&width=360"
+                        alt="">
+                </div>
+                <div class="sneakers-details">
+                    <a href="">Kunal Rawal Mehfil Green Kurta</a>
+                    <span>Rs. 8,990.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header">
+            <p>FEATURED ON</p>
+        </div>
+
+        <div class="feature-brand">
+            <div class="brand-top">
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/Vogue.png?v=1700032505&width=300" alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/Bombay_Times.png?v=1700032504&width=300"
+                        alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/LLBpng.png?v=1700032504&width=300" alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/BCC_Icon_2ece5154-8ebb-4d2e-961a-ccdfa98cac30.png?v=1700032504&width=300"
+                        alt="">
+                </div>
+            </div>
+            <div class="brand-bottom">
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/HOMEGROWN-LOGO-01.png?v=1700222532&width=300"
+                        alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/Cosmopolitan-logo.png?v=1700222640&width=300"
+                        alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/logo_3.png?v=1700222919&width=300" alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/Media-3.jpg?v=1700222950&width=300" alt="">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <div class="shop">
+                <div class="footer-title">
+                    <span>Important Links</span>
+                </div>
+                <p>Returns policy</p>
+                <p>Women</p>
+                <p>Men</p>
+                <p>Clearance</p>
+                <p>Blog</p>
+                <p>BCC Rewards</p>
+                <p>Terms of Service</p>
+            </div>
+            <div class="more-info">
+                <div class="footer-title">
+                    <span>Contact</span>
+                </div>
+                <p>About Us</p>
+                <p>Email Us</p>
+                <p>FAQ</p>
+                <p>Store Locator</p>
+                <p>SWAP or SELL</p>
+
+            </div>
+        </div>
+
+        <div class="footer-text-buttom">
+            <div class="footer-lft">
+                <div class="foot-title">
+                    <span>Subscribe to our emails</span>
+                </div>
+                <div class="input-section">
+                    <input type="email" placeholder="Enter your email">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyZW0iIGhlaWdodD0iMmVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik0yNCAwdjI0SDBWMHpNMTIuNTkzIDIzLjI1OGwtLjAxMS4wMDJsLS4wNzEuMDM1bC0uMDIuMDA0bC0uMDE0LS4wMDRsLS4wNzEtLjAzNXEtLjAxNi0uMDA1LS4wMjQuMDA1bC0uMDA0LjAxbC0uMDE3LjQyOGwuMDA1LjAybC4wMS4wMTNsLjEwNC4wNzRsLjAxNS4wMDRsLjAxMi0uMDA0bC4xMDQtLjA3NGwuMDEyLS4wMTZsLjAwNC0uMDE3bC0uMDE3LS40MjdxLS4wMDQtLjAxNi0uMDE3LS4wMThtLjI2NS0uMTEzbC0uMDEzLjAwMmwtLjE4NS4wOTNsLS4wMS4wMWwtLjAwMy4wMTFsLjAxOC40M2wuMDA1LjAxMmwuMDA4LjAwN2wuMjAxLjA5M3EuMDE5LjAwNS4wMjktLjAwOGwuMDA0LS4wMTRsLS4wMzQtLjYxNHEtLjAwNS0uMDE5LS4wMi0uMDIybS0uNzE1LjAwMmEuMDIuMDIgMCAwIDAtLjAyNy4wMDZsLS4wMDYuMDE0bC0uMDM0LjYxNHEuMDAxLjAxOC4wMTcuMDI0bC4wMTUtLjAwMmwuMjAxLS4wOTNsLjAxLS4wMDhsLjAwNC0uMDExbC4wMTctLjQzbC0uMDAzLS4wMTJsLS4wMS0uMDF6Ii8+PHBhdGggZmlsbD0iIzY4NzYwNCIgZD0ibTE0LjcwNyA1LjYzNmw1LjY1NyA1LjY1N2ExIDEgMCAwIDEgMCAxLjQxNGwtNS42NTcgNS42NTdhMSAxIDAgMCAxLTEuNDE0LTEuNDE0bDMuOTUtMy45NUg0YTEgMSAwIDEgMSAwLTJoMTMuMjQzbC0zLjk1LTMuOTVhMSAxIDAgMSAxIDEuNDE0LTEuNDE0Ii8+PC9nPjwvc3ZnPg=="
+                        alt="">
+                </div>
+            </div>
+            <div class="footer-rgt">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjJlbSIgaGVpZ2h0PSIxLjJlbSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMTIxMzBlIiBkPSJNMjIgMTJjMC01LjUyLTQuNDgtMTAtMTAtMTBTMiA2LjQ4IDIgMTJjMCA0Ljg0IDMuNDQgOC44NyA4IDkuOFYxNUg4di0zaDJWOS41QzEwIDcuNTcgMTEuNTcgNiAxMy41IDZIMTZ2M2gtMmMtLjU1IDAtMSAuNDUtMSAxdjJoM3YzaC0zdjYuOTVjNS4wNS0uNSA5LTQuNzYgOS05Ljk1Ii8+PC9zdmc+"
+                    alt="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjJlbSIgaGVpZ2h0PSIxLjJlbSIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSIxNyIgY3k9IjciIHI9IjEuNSIgZmlsbD0iIzEyMTMwZSIgZmlsbC1vcGFjaXR5PSIwIj48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9ImZpbGwtb3BhY2l0eSIgYmVnaW49IjEuM3MiIGR1cj0iMC4xNXMiIHZhbHVlcz0iMDsxIi8+PC9jaXJjbGU+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTIxMzBlIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggc3Ryb2tlLWRhc2hhcnJheT0iNzIiIHN0cm9rZS1kYXNob2Zmc2V0PSI3MiIgZD0iTTE2IDNjMi43NiAwIDUgMi4yNCA1IDV2OGMwIDIuNzYgLTIuMjQgNSAtNSA1aC04Yy0yLjc2IDAgLTUgLTIuMjQgLTUgLTV2LThjMCAtMi43NiAyLjI0IC01IDUgLTVoNFoiPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hvZmZzZXQiIGR1cj0iMC42cyIgdmFsdWVzPSI3MjswIi8+PC9wYXRoPjxwYXRoIHN0cm9rZS1kYXNoYXJyYXk9IjI4IiBzdHJva2UtZGFzaG9mZnNldD0iMjgiIGQ9Ik0xMiA4YzIuMjEgMCA0IDEuNzkgNCA0YzAgMi4yMSAtMS43OSA0IC00IDRjLTIuMjEgMCAtNCAtMS43OSAtNCAtNGMwIC0yLjIxIDEuNzkgLTQgNCAtNCI+PGFuaW1hdGUgZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaG9mZnNldCIgYmVnaW49IjAuN3MiIGR1cj0iMC42cyIgdmFsdWVzPSIyODswIi8+PC9wYXRoPjwvZz48L3N2Zz4="
+                    alt="">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer-end">
+            <span>© 2025, </span>
+            <span id="effect" >Bombay Closet Cleanse </span>
+            <span id="effect" >Powered by Shopify </span>
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,813 @@
+:root {
+    font-family: "DM Sans";
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 9.7rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    text-decoration: none;
+    width: 100%;
+    height: 20vh;
+    border-bottom: 1px solid #ececec;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6d5c53;
+    font-weight: lighter;
+}
+
+.nav-main select {
+    border: none;
+    color: #6d5c53;
+    font-weight: lighter;
+    cursor: pointer;
+    outline: none;
+    width: 215px;
+}
+
+.nav-main select:hover {
+    border-bottom: 1px solid;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-main {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 0.9rem;
+
+}
+
+.nav-rgt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: large;
+}
+
+.hero-section {
+    width: 88%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Make picture and img elements fill the container */
+.hero-section picture,
+.hero-section img {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.top-product {
+    display: flex;
+    margin: auto;
+    overflow-x: auto;
+    width: 92%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 280px;
+    gap: 1rem;
+
+}
+
+.product-image {
+    overflow: hidden;
+
+}
+
+.product img {
+    object-fit: cover;
+    width: 100%;
+    height: 45vh;
+    display: block;
+    transition: transform 0.5s ease-out;
+}
+
+.product:hover img {
+    transform: scale(1.10);
+
+}
+
+.product-details {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.product-details a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #070707;
+}
+
+.product-details span {
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    color: #070707;
+}
+
+
+.top-product::-webkit-scrollbar {
+    height: 8px;
+    background-color: transparent;
+}
+
+.top-product::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.top-product::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+}
+
+.header {
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+.accessories-section {
+    display: flex;
+    margin: auto;
+    overflow-x: auto;
+    width: 99%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+}
+
+.accessories {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 280px;
+    gap: 1rem;
+
+}
+
+.accessories-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.accessories-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+}
+
+.accessories img {
+    object-fit: cover;
+    width: 100%;
+    height: 45vh;
+    display: block;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.accessories-image:hover img {
+    transform: scale(1.10);
+}
+
+.accessories-image:hover .accessories-2 {
+    opacity: 1;
+}
+
+.accessories-details {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.accessories-details a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #070707;
+}
+
+.accessories-details span {
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    color: #070707;
+}
+
+.accessories-section::-webkit-scrollbar {
+    height: 8px;
+    background-color: transparent;
+}
+
+.accessories-section::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.accessories-section::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+}
+
+.sneakers-section {
+    display: flex;
+    margin: auto;
+    overflow-x: auto;
+    width: 99%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+}
+
+.sneakers {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 280px;
+    gap: 1rem;
+
+}
+
+.sneakers-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.sneakers-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+}
+
+.sneakers img {
+    object-fit: cover;
+    width: 100%;
+    height: 45vh;
+    display: block;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.sneakers-image:hover img {
+    transform: scale(1.10);
+}
+
+.sneakers-image:hover .sneakers-2 {
+    opacity: 1;
+}
+
+.sneakers-details {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.sneakers-details a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #070707;
+}
+
+.sneakers-details span {
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    color: #070707;
+}
+
+.sneakers-section::-webkit-scrollbar {
+    height: 8px;
+    background-color: transparent;
+}
+
+.sneakers-section::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.sneakers-section::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+}
+
+
+
+.traditional-section {
+    display: flex;
+    margin: auto;
+    overflow-x: auto;
+    width: 99%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+}
+
+.traditional {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 280px;
+
+}
+
+.traditional-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.traditional-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+}
+
+.traditional img {
+    object-fit: cover;
+    width: 100%;
+    height: 45vh;
+    display: block;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.traditional-image:hover img {
+    transform: scale(1.10);
+}
+
+.traditional-image:hover .sneakers-2 {
+    opacity: 1;
+}
+
+.traditional-details {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.traditional-details a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #070707;
+}
+
+.traditional-details span {
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    color: #070707;
+}
+
+.traditional-section::-webkit-scrollbar {
+    height: 8px;
+    background-color: transparent;
+}
+
+.traditional-section::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.traditional-section::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+}
+
+.feature-brand {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    margin: auto;
+}
+
+.brand-top {
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.brand-bottom {
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -2rem;
+}
+
+.brand {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 10.154375rem;
+    height: 10.154375rem;
+}
+
+.brand img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 72vh;
+    background-color: #cee050;
+    align-items: flex-start;
+}
+
+.footer-text {
+    font-size: large;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10vw;
+    gap: 1rem;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20rem;
+    margin-top: 2vh;
+}
+
+.footer-title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #424d00;
+    font-weight: bold;
+    font-size: large;
+}
+
+.shop p {
+    margin-top: 0.8em;
+    color: #424d00;
+    font-weight: 600;
+    font-size: medium;
+}
+
+.shop p:hover {
+    text-decoration: underline;
+}
+
+.more-info p {
+    margin-top: 0.8em;
+    color: #424d00;
+    font-weight: 600;
+    font-size: medium;
+
+}
+
+.more-info p:hover {
+    text-decoration: underline;
+}
+
+.input-section {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    border: 1px solid #687604;
+    justify-content: center;
+    width: 25vw;
+    height: 6vh;
+    justify-content: space-between;
+}
+
+.input-section input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    margin-left: 0.5rem;
+    outline: none;
+}
+
+.input-section input {
+    margin-right: 0.5rem;
+}
+
+.input-section:hover {
+    border: 2px solid #687604;
+
+}
+
+input::placeholder {
+    color: #424d00;
+    opacity: 1;
+    font-size: large;
+}
+
+.footer-text-buttom {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.foot-title {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #424d00;
+}
+.footer-rgt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+hr{
+    border: 1px solid #bfd044;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-end{
+    display: flex;
+    align-self: center;
+    justify-self: end;
+    text-align: center;
+    color: #536300;
+    gap: 0.2rem;
+}
+#effect:hover{
+    text-decoration: underline;
+}
+
+
+
+#menu-toggle {
+    display: none; 
+}
+
+.hamburger-icon {
+    display: none; 
+    cursor: pointer;
+    z-index: 1001; 
+}
+
+
+@media (max-width: 768px) {
+
+    /* --- Header and Nav --- */
+    header {
+        /* Adjust padding for the new, shorter nav */
+        padding-top: 0vh; 
+    }
+    
+    nav {
+        height: 10vh; /* Make nav bar shorter */
+        justify-content: space-between; /* Space out hamburger and icons */
+        padding: 0 1rem; /* Add some side padding */
+        position: relative; /* For centering the logo */
+    }
+
+    .hamburger-icon {
+        display: block; /* Show the hamburger icon */
+    }
+
+    .nav-lft {
+        /* This centers the logo */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto; /* Allow it to be centered */
+    }
+
+    .nav-lft img {
+        width: 100px; /* Make logo smaller */
+        height: auto;
+    }
+
+    .nav-main {
+        /* This is the slide-out menu */
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh; /* Position below the nav bar */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        
+        /* Hide it by default */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+
+        /* Style the links inside */
+        gap: 0;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    .nav-main a,
+    .nav-main select {
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-main select {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* --- This is the magic: Show menu when checkbox is checked --- */
+    #menu-toggle:checked ~ .nav-main {
+        transform: translateX(0);
+    }
+
+
+    .nav-rgt {
+        gap: 0.8rem; /* Reduce gap for icons */
+    }
+
+    /* Hide the "INR" text link on mobile */
+    .nav-rgt a:first-child {
+        display: none;
+    }
+
+    /* --- Hero Section --- */
+    .hero-section {
+        width: 100%; /* Make hero full-width */
+    }
+
+
+    /* --- Main Content Sections --- */
+    .top-product {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 2rem;
+    }
+
+    .product,
+    .accessories,
+    .sneakers,
+    .traditional {
+        width: 250px; /* Make product cards slightly smaller */
+    }
+
+    .header {
+        font-size: x-large; /* Reduce header size */
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .accessories-section,
+    .sneakers-section,
+    .traditional-section {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+    /* --- Featured Brands --- */
+    .feature-brand {
+        width: 90%;
+    }
+
+    .brand-top,
+    .brand-bottom {
+        flex-direction: column; /* Stack brands vertically */
+        width: 100%;
+        align-items: center;
+        margin-top: 0;
+        gap: 1rem;
+    }
+
+    .brand {
+        width: 200px; /* Give brands a consistent width */
+        height: auto;
+    }
+
+
+    /* --- Footer --- */
+    footer {
+        height: auto; /* Let content define footer height */
+        padding: 2rem 1rem;
+    }
+
+    .footer-text {
+        flex-direction: column; /* Stack link columns */
+        gap: 2rem;
+        margin-left: 2;
+        width: 100%;
+        text-align: left;
+        align-items: left;
+    }
+
+    .footer-text-buttom {
+        flex-direction: column; /* Stack subscribe and social icons */
+        gap: 2rem;
+        padding-left: 0;
+        padding-right: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-lft {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-section {
+        width: 100%; /* Make input full-width */
+        max-width: 400px;
+    }
+
+    .footer-rgt {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer-end {
+        flex-direction: column; /* Stack copyright info */
+        gap: 0.5rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Thrift Shop - Buy, Sell, Rent - Bombay Closet Cleanse</title>
+    <link rel="stylesheet" href="premium.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger-icon">
+                <svg viewBox="0 0 100 80" width="25" height="25" fill="#6d5c53">
+                    <rect width="100" height="10"></rect>
+                    <rect y="30" width="100" height="10"></rect>
+                    <rect y="60" width="100" height="10"></rect>
+                </svg>
+            </label>
+
+            <a href="index.html">
+                <div class="nav-lft">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/Untitled_design_9.png?v=1726226430&width=130"
+                        alt="brand logo">
+                </div>
+            </a>
+            <div class="nav-main">
+                <a href="">Home</a>
+                <select name="selection" id="my-selection">
+                    <option value="">SUNNY KAUSHAL'S CLOSET</option>
+                    <option value="option1">SHOP ALL</option>
+                    <option value="option2">Tees, Hoodies & more</option>
+                    <option value="option3">Watches & Accessories</option>
+                    <option value="option3">Sneakers & more</option>
+                    <option value="option3">Traditional & Formal Curation</option>
+                </select>
+                <a href="">PREMIUM FINDS</a>
+                <a href="">SNEAKER RAFFLE TICKETS</a>
+            </div>
+            <div class="nav-rgt">
+                <a href="">INR ₹ | India</a>
+                <a href=""><img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyZW0iIGhlaWdodD0iMmVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM2ZDVjNTMiIGQ9Im0xOS40ODUgMjAuMTU0bC02LjI2Mi02LjI2MnEtLjc1LjYzOS0xLjcyNS45ODl0LTEuOTYuMzVxLTIuNDAyIDAtNC4wNjYtMS42NjNUMy44MDggOS41MDNUNS40NyA1LjQzNnQ0LjA2NC0xLjY2N3Q0LjA2OCAxLjY2NFQxNS4yNjggOS41cTAgMS4wNDItLjM2OSAyLjAxN3QtLjk3IDEuNjY4bDYuMjYyIDYuMjYxek05LjUzOSAxNC4yM3ExLjk5IDAgMy4zNi0xLjM3dDEuMzctMy4zNjF0LTEuMzctMy4zNnQtMy4zNi0xLjM3dC0zLjM2MSAxLjM3dC0xLjM3IDMuMzZ0MS4zNyAzLjM2dDMuMzYgMS4zNyIvPjwvc3ZnPg=="
+                        alt=""></a>
+                <a href=""><img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyZW0iIGhlaWdodD0iMmVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM2ZDVjNTMiIGQ9Ik0xMS41IDE0YzQuMTQgMCA3LjUgMS41NyA3LjUgMy41VjIwSDR2LTIuNWMwLTEuOTMgMy4zNi0zLjUgNy41LTMuNW02LjUgMy41YzAtMS4zOC0yLjkxLTIuNS02LjUtMi41UzUgMTYuMTIgNSAxNy41VjE5aDEzek0xMS41IDVBMy41IDMuNSAwIDAgMSAxNSA4LjVhMy41IDMuNSAwIDAgMS0zLjUgMy41QTMuNSAzLjUgMCAwIDEgOCA4LjVBMy41IDMuNSAwIDAgMSAxMS41IDVtMCAxQTIuNSAyLjUgMCAwIDAgOSA4LjVhMi41IDIuNSAwIDAgMCAyLjUgMi41QTIuNSAyLjUgMCAwIDAgMTQgOC41QTIuNSAyLjUgMCAwIDAgMTEuNSA2Ii8+PC9zdmc+"
+                        alt=""></a>
+                <a href=""><img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyZW0iIGhlaWdodD0iMmVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZkNWM1MyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSI+PHBhdGggZD0iTTYuNDUgOS4yM2gxMS4xYTEuODUgMS44NSAwIDAgMSAxLjg1IDEuODV2Ni40NzJhMy43IDMuNyAwIDAgMS0zLjcgMy42OThIOC4zYTMuNyAzLjcgMCAwIDEtMy43LTMuNjk4VjExLjA4YTEuODUgMS44NSAwIDAgMSAxLjg1LTEuODUiLz48cGF0aCBkPSJNMTYuNjI1IDExLjU1M1Y3LjM4MWE0LjYyIDQuNjIgMCAwIDAtMi44NTItNC4yNzhhNC42MjcgNC42MjcgMCAwIDAtNi4zOTggNC4yNzh2NC4xNzIiLz48L2c+PC9zdmc+"
+                        alt=""></a>
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+        <div class="header">
+            <p>PREMIUM FINDS</p>
+        </div>
+
+        <div class="mobile-filter-toggle">
+
+            <label for="filter-toggle" class="filter-icon-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+                <span>Filter & Sort</span>
+            </label>
+        </div>
+
+        <input type="checkbox" id="filter-toggle">
+
+        <div class="filter-bar">
+            <div class="filter-lft">
+                <span>Filter:</span>
+                <select name="Availability" id="Availability">
+                    <option value="Availability">Availability</option>
+                </select>
+                <select name="Availability" id="Availability">
+                    <option value="Availability">Price</option>
+                </select>
+                <select name="Availability" id="Availability">
+                    <option value="Availability">Size</option>
+                </select>
+            </div>
+            <div class="filter-rgt">
+                <span>Sort by:</span>
+                <select name="best" id="best">
+                    <option value="best">Best selling</option>
+                </select>
+                <span>42 products</span>
+            </div>
+        </div>
+        <div class="product-section">
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_4160ef82-114c-4d43-9ac4-f34906480961.jpg?v=1761814885&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_5701b19a-f630-407d-8850-bbdb9b07f197.jpg?v=1761814885&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">DUSALA INDIA RAVYA FINE WOOL</a>
+                    <span><del>Rs. 20,000.00</del> Rs. 8,990.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                
+                    <div class="product-image">
+                        <a href="index.html">
+                            <img class="product-1"
+                                src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_30a0e5e6-fbac-4b74-a4f6-c85fca082c6f.jpg?v=1761816106&width=600"
+                                alt="">
+                        </a>
+                        <a href="index.html">
+                            <img class="product-2"
+                                src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_30b97d6e-0669-41b8-8508-b4d7ed7845b1.jpg?v=1761816106&width=360"
+                                alt="">
+                        </a>
+                    </div>
+                
+
+                <div class="product-details">
+                    <a href="">Summer Away Lourdes Dress</a>
+                    <span><del>Rs. 6,590.00</del> Rs. 3,890.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_0b0a049a-34d9-4539-b6ff-fdb76ccd7d82.jpg?v=1761997471&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_26ba0adf-def0-43ac-a64c-daec57085ca4.jpg?v=1761997471&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="product-cart.html">Summer Away Set Of 2</a>
+                    <span><del>Rs. 4,490.00</del> Rs. 3,290.00</span>
+                    <button value="p">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_57217019-c602-4916-b6c5-8a787bf24d4a.jpg?v=1761992139&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_3a7127c9-e66e-496b-b0d8-f82c606518a5.jpg?v=1761992139&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">The Dapper Lady Pant</a>
+                    <span><del>Rs. 7,290.00</del> Rs. 3,890.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_4afe8ffd-9d8b-4d4b-95f3-7f279e916485.jpg?v=1761989442&width=1100"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_4c392a1d-9128-4a46-9dae-78a07afda427.jpg?v=1761989442&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Versace Black Jeans</a>
+                    <span>Rs. 14,990.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_975d8e56-b361-44ba-a825-9242dfc5e3bf.jpg?v=1761983956&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_c36fc14e-61ec-4739-9f82-c8c820ab9135.jpg?v=1761983956&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Cult Gaia Pink Ariah One Piece</a>
+                    <span><del>Rs. 26,999.00</del> Rs. 6,890.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_498f87b5-61e6-494f-9ed8-90eefd1a7317.jpg?v=1761982993&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_b8b5c177-f1b0-4d30-bac2-e8ae6590345e.jpg?v=1761983018&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Off White Black Tee</a>
+                    <span><del>Rs. 21,000.00</del> Rs. 6,890.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_f0dbd246-b4fd-407a-afd5-beddf3132db2.jpg?v=1761981417&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_4097b7a1-4e30-4b53-b112-1c4bf249446f.jpg?v=1761981417&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Nike Black Jumpsuit</a>
+                    <span>Rs. 8,990.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_b7946e9c-1a0b-426c-9900-54a81cd6ddb2.jpg?v=1761914209&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_a187f56f-a9d4-4d75-add3-05eddfeafa4b.jpg?v=1761914209&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Adidas x Fear Of God Athletics Mens Tee</a>
+                    <span>Rs. 3,290.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_7c86c677-0e52-439f-ba2c-a9d9c85e8cbd.webp?v=1761913982&width=360"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_7c86c677-0e52-439f-ba2c-a9d9c85e8cbd.webp?v=1761913982&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Michael Kors Blue Tee</a>
+                    <span>Rs. 2,290.00 </span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_1138e724-6939-4115-8641-ece51f9eeb42.jpg?v=1761913656&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_f62dda4e-1afa-4b99-9900-594dfb6b8408.jpg?v=1761913656&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">G Raw Green Cargo</a>
+                    <span>Rs. 4,890.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_fcf6a7b4-03ed-4a97-afd2-885f8e87e863.jpg?v=1761912102&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_002621da-2e2c-47b0-9d96-24b96ae80c94.jpg?v=1761912388&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Nackiye Blue&White Lining Dress</a>
+                    <span>Rs. 4,890.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_9458ede7-e182-48db-b532-ca3aba1f3b2c.jpg?v=1761911491&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_e6780166-c660-4097-9c76-de63591a757a.jpg?v=1761911491&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Rare Rabbit Brown Pant</a>
+                    <span>Rs. 1,290.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_d7c4bbbf-36c4-4f5b-b457-345dc936fe27.webp?v=1761909225&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_68689c49-3ed2-4dc2-a7bc-7ab70b1adad7.webp?v=1761909225&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">The Souled Store Denim Cargo Jeans</a>
+                    <span>Rs. 1,690.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_95e968a3-e0b9-4776-9642-b704d53dfb27.jpg?v=1761906585&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_fddade4b-c62d-4c24-b1af-95d3c09e1b64.jpg?v=1761906601&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Denim Forum Denim Shirt</a>
+                    <span>Rs. 2,290.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_5c316281-b8a8-4e5b-a452-4a5ae16d265f.jpg?v=1761825026&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_07603e96-6431-4860-b0c7-7aad65a5e754.jpg?v=1761825026&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Verb Pallavi Singhee Orange Dress</a>
+                    <span><del>Rs. 13,500.00</del> Rs. 5,990.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_2fa454ed-8e1a-416b-8140-8568e734cebf.jpg?v=1761908154&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_08b8f050-2dd8-4c7f-90fa-25f02d5effd9.jpg?v=1761908154&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Rare Rabbit Blue Baggy</a>
+                    <span>Rs. 1,890.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_53938c6e-2c7b-4326-94ae-287e96f22a5b.jpg?v=1761906502&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_71e43fd1-7053-4923-b7e7-3286684a28ec.jpg?v=1761906521&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Denim Forum Denim Shirt</a>
+                    <span>Rs. 2,290.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_e41dc39b-0ba8-4438-8e4d-935f78233682.jpg?v=1761905813&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_2153052a-f65d-4aec-becd-c02ca375e366.jpg?v=1761905813&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">The Souled Store Denim Cargo</a>
+                    <span>Rs. 1,890.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img class="product-1"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_fe269371-a086-4b06-a934-61fc59d3babd.jpg?v=1761906933&width=600"
+                        alt="">
+                    <img class="product-2"
+                        src="https://bombayclosetcleanse.in/cdn/shop/files/rn-image_picker_lib_temp_1c650f35-4a31-41f1-8619-1ac5dbaa87b3.jpg?v=1761906952&width=360"
+                        alt="">
+                </div>
+                <div class="product-details">
+                    <a href="">Adidas AMG Petronas Black Track Pant</a>
+                    <span>Rs. 2,290.00</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="header">
+            <p>FEATURED ON</p>
+        </div>
+
+        <div class="feature-brand">
+            <div class="brand-top">
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/Vogue.png?v=1700032505&width=300" alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/Bombay_Times.png?v=1700032504&width=300"
+                        alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/LLBpng.png?v=1700032504&width=300" alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/BCC_Icon_2ece5154-8ebb-4d2e-961a-ccdfa98cac30.png?v=1700032504&width=300"
+                        alt="">
+                </div>
+            </div>
+            <div class="brand-bottom">
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/HOMEGROWN-LOGO-01.png?v=1700222532&width=300"
+                        alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/Cosmopolitan-logo.png?v=1700222640&width=300"
+                        alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/logo_3.png?v=1700222919&width=300" alt="">
+                </div>
+                <div class="brand">
+                    <img src="https://bombayclosetcleanse.in/cdn/shop/files/Media-3.jpg?v=1700222950&width=300" alt="">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <div class="shop">
+                <div class="footer-title">
+                    <span>Important Links</span>
+                </div>
+                <p>Returns policy</p>
+                <p>Women</p>
+                <p>Men</p>
+                <p>Clearance</p>
+                <p>Blog</p>
+                <p>BCC Rewards</p>
+                <p>Terms of Service</p>
+            </div>
+            <div class="more-info">
+                <div class="footer-title">
+                    <span>Contact</span>
+                </div>
+                <p>About Us</p>
+                <p>Email Us</p>
+                <p>FAQ</p>
+                <p>Store Locator</p>
+                <p>SWAP or SELL</p>
+
+            </div>
+        </div>
+
+        <div class="footer-text-buttom">
+            <div class="footer-lft">
+                <div class="foot-title">
+                    <span>Subscribe to our emails</span>
+                </div>
+                <div class="input-section">
+                    <input type="email" placeholder="Enter your email">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyZW0iIGhlaWdodD0iMmVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik0yNCAwdjI0SDBWMHpNMTIuNTkzIDIzLjI1OGwtLjAxMS4wMDJsLS4wNzEuMDM1bC0uMDIuMDA0bC0uMDE0LS4wMDRsLS4wNzEtLjAzNXEtLjAxNi0uMDA1LS4wMjQuMDA1bC0uMDA0LjAxbC0uMDE3LjQyOGwuMDA1LjAybC4wMS4wMTNsLjEwNC4wNzRsLjAxNS4wMDRsLjAxMi0uMDA0bC4xMDQtLjA3NGwuMDEyLS4wMTZsLjAwNC0uMDE3bC0uMDE3LS40MjdxLS4wMDQtLjAxNi0uMDE3LS4wMThtLjI2NS0uMTEzbC0uMDEzLjAwMmwtLjE4NS4wOTNsLS4wMS4wMWwtLjAwMy4wMTFsLjAxOC40M2wuMDA1LjAxMmwuMDA4LjAwN2wuMjAxLjA5M3EuMDE5LjAwNS4wMjktLjAwOGwuMDA0LS4wMTRsLS4wMzQtLjYxNHEtLjAwNS0uMDE5LS4wMi0uMDIybS0uNzE1LjAwMmEuMDIuMDIgMCAwIDAtLjAyNy4wMDZsLS4wMDYuMDE0bC0uMDM0LjYxNHEuMDAxLjAxOC4wMTcuMDI0bC4wMTUtLjAwMmwuMjAxLS4wOTNsLjAxLS4wMDhsLjAwNC0uMDExbC4wMTctLjQzbC0uMDAzLS4wMTJsLS4wMS0uMDF6Ii8+PHBhdGggZmlsbD0iIzY4NzYwNCIgZD0ibTE0LjcwNyA1LjYzNmw1LjY1NyA1LjY1N2ExIDEgMCAwIDEgMCAxLjQxNGwtNS42NTcgNS42NTdhMSAxIDAgMCAxLTEuNDE0LTEuNDE0bDMuOTUtMy45NUg0YTEgMSAwIDEgMSAwLTJoMTMuMjQzbC0zLjk1LTMuOTVhMSAxIDAgMSAxIDEuNDE0LTEuNDE0Ii8+PC9nPjwvc3ZnPg=="
+                        alt="">
+                </div>
+            </div>
+            <div class="footer-rgt">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjJlbSIgaGVpZ2h0PSIxLjJlbSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMTIxMzBlIiBkPSJNMjIgMTJjMC01LjUyLTQuNDgtMTAtMTAtMTBTMiA2LjQ4IDIgMTJjMCA0Ljg0IDMuNDQgOC44NyA4IDkuOFYxNUg4di0zaDJWOS41QzEwIDcuNTcgMTEuNTcgNiAxMy41IDZIMTZ2M2gtMmMtLjU1IDAtMSAuNDUtMSAxdjJoM3YzaC0zdjYuOTVjNS4wNS0uNSA5LTQuNzYgOS05Ljk1Ii8+PC9zdmc+"
+                    alt="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjJlbSIgaGVpZ2h0PSIxLjJlbSIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSIxNyIgY3k9IjciIHI9IjEuNSIgZmlsbD0iIzEyMTMwZSIgZmlsbC1vcGFjaXR5PSIwIj48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9ImZpbGwtb3BhY2l0eSIgYmVnaW49IjEuM3MiIGR1cj0iMC4xNXMiIHZhbHVlcz0iMDsxIi8+PC9jaXJjbGU+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTIxMzBlIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggc3Ryb2tlLWRhc2hhcnJheT0iNzIiIHN0cm9rZS1kYXNob2Zmc2V0PSI3MiIgZD0iTTE2IDNjMi43NiAwIDUgMi4yNCA1IDV2OGMwIDIuNzYgLTIuMjQgNSAtNSA1aC04Yy0yLjc2IDAgLTUgLTIuMjQgLTUgLTV2LThjMCAtMi43NiAyLjI0IC01IDUgLTVoNFoiPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hvZmZzZXQiIGR1cj0iMC42cyIgdmFsdWVzPSI3MjswIi8+PC9wYXRoPjxwYXRoIHN0cm9rZS1kYXNoYXJyYXk9IjI4IiBzdHJva2UtZGFzaG9mZnNldD0iMjgiIGQ9Ik0xMiA4YzIuMjEgMCA0IDEuNzkgNCA0YzAgMi4yMSAtMS43OSA0IC00IDRjLTIuMjEgMCAtNCAtMS43OSAtNCAtNGMwIC0yLjIxIDEuNzkgLTQgNCAtNCI+PGFuaW1hdGUgZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaG9mZnNldCIgYmVnaW49IjAuN3MiIGR1cj0iMC42cyIgdmFsdWVzPSIyODswIi8+PC9wYXRoPjwvZz48L3N2Zz4="
+                    alt="">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer-end">
+            <span>© 2025, </span>
+            <span id="effect">Bombay Closet Cleanse </span>
+            <span id="effect">Powered by Shopify </span>
+        </div>
+
+    </footer>
+</body>
+
+</html>
